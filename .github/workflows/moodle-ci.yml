@@ -57,7 +57,6 @@ jobs:
 
       - name: Install moodle-plugin-ci
         run: |
-          moodle-plugin-ci add-plugin --clone https://github.com/bdecentgmbh/moodle-mod_pulse.git --branch m40
           moodle-plugin-ci install --plugin ./plugin --db-host=127.0.0.1
         env:
           DB: ${{ matrix.database }}
